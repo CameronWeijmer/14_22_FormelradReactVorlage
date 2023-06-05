@@ -1,3 +1,4 @@
+import '../css/mvp.css';
 import {useState} from "react";
 import formelrad from "../image/formelradelektronik.gif";
 import InputField from "../formular/InputField";
