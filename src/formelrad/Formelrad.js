@@ -1,5 +1,5 @@
-import "../css/mvp.css";
 import { useState } from "react";
+import "../css/mvp.css";
 import formelrad from "../image/formelradelektronik.gif";
 import InputField from "../formular/InputField";
 
@@ -9,12 +9,12 @@ export default function Formelrad() {
     i: 2,
     r: "",
   });
-
   return (
     <>
       <section>
         <header>
-          <h2>Formelrad</h2> <img src={formelrad} width="200" alt="Formelrad" />{" "}
+          <h2>Formelrad</h2>
+          <img src={formelrad} width="200" alt="Formelrad" />
         </header>
         <form>
           <InputField
@@ -28,7 +28,7 @@ export default function Formelrad() {
           <InputField
             color={"black"}
             value={values.i}
-            label="Stromstaerke"
+            label="Stromstärke"
             handleChange={(e) => {
               setValues((values) => ({ ...values, i: e.target.value }));
             }}
