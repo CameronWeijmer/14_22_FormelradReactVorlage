@@ -15,7 +15,7 @@ export default function Formelrad() {
       <section>
         <header>
           <h2>Formelrad</h2> <img src={formelrad} width="200" alt="Formelrad" />{" "}
-        </header>y
+        </header>
         <form>
           <InputField
             color={"black"}
