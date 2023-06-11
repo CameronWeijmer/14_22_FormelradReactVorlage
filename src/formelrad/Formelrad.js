@@ -26,14 +26,7 @@ export default function Formelrad() {
             /*calculate u and p */
             setValues(values => ({...values, u: values.i * values.r}));
             setValues(values => ({...values, p: values.i * values.i * values.r}));
-        }
-    }
-
-
-    const calculate = (event) => {
-        event.preventDefault();
-        console.log("calculate");
-        if (values.i === "" && values.r === "") {
+        } else if (values.i === "" && values.r === "") {
             /*calculate i and r */
             setValues(values => ({...values, i: values.p / values.u}));
             setValues(values => ({...values, r: values.u * values.u / values.p}));
@@ -55,7 +48,7 @@ export default function Formelrad() {
                     <h2>Formelrad</h2>
                     <img src={formelrad} width="200" alt="Formelrad"/>
                 </header>
-                <form onSubmit={handleSubmit} onSubmit={calculate}>
+                <form onSubmit={handleSubmit}>
                     <InputField color={"black"} value={values.u} label="Spannung" handleChange={e => {setValues(values => ({...values, u: e.target.value}))}} />
                     <InputField color={"black"} value={values.i} label="Stromstärke" handleChange={e => {setValues(values => ({...values, i: e.target.value}))}} />
                     <InputField color={"black"} value={values.r} label="Widerstand" handleChange={e => {setValues(values => ({...values, r: e.target.value}))}} />
